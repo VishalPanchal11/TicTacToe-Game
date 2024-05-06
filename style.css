@@ -1,85 +1,174 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
-body{
-    height: 100vmin;
-    background-color: #AFA2FF;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
-h1{
-    margin: 1rem 0 ;
-    color: #3f3f3f;
-    font-size: 10vmin;
+body {
+  height: 100vmin;
+  background-color: #afa2ff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-.container{
-    height: 60vh;
-    display: flex;
- justify-content: center;
- align-items: center;
+@media only screen and (max-width: 750px) {
+    body{
+        justify-content: flex-start;
+    }
 }
-.game{
- height: 60vmin ;
- width: 60vmin;
- display: flex;
- justify-content: center;
- align-items: center;
- flex-wrap: wrap;
- gap: 2vmin;
+
+h1 {
+  color: #3f3f3f;
+  font-size: 10vmin;
+  margin: 0 0 -8rem 0;
 }
-.box{
- height: 18vmin;
- width: 18vmin;
- color: #91e2ff;
- background-color: #5667a4;
- border: none;
- border-radius: 1rem;
- box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
- font-size: 12vmin;
- font-weight: 600;
+@media only screen and (min-width: 750px) {
+  h1 {
+    margin: 1rem 0;
+  }
+}
+
+.container {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2vmin;
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  color: #91e2ff;
+  background-color: #5667a4;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  font-size: 12vmin;
+  font-weight: 600;
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 750px) {
+  .main-container {
+    flex-direction: row;
+  }
+}
+@media only screen and (max-width: 749px) {
+  .middle-container {
+    margin-bottom: -8rem;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .middle-container {
+    margin-top: 8vh;
+  }
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+#reset-button,
+#pvp-button,
+#cvp-button {
+  background-color: #3f3f3f;
+  color: white;
+  border: none;
+  padding: 1rem 1rem;
+  font-size: 4vmin;
+  border-radius: 0.8rem;
+  width: 10rem;
+}
+#pvp-button,
+#cvp-button {
+    margin:6rem 0;
 }
 #reset-button{
-    background-color: #3f3f3f;
-    color: white;
-    border: none;
-    margin-top: 1.5rem;
-    padding: 0.6rem 1rem;
-    font-size: 4vmin;
-    border-radius: 0.8rem;
+    margin: 6rem 0 0 0;
 }
-.dialogue-box{
-    display: flex;
-    justify-content: center;
-        align-items: center;
-        width: 125vmin;
-        background-color: #5667a4;
-        border-bottom-left-radius: 70px;
-        border-bottom-right-radius: 70px;
+
+@media only screen and (min-width: 750px) {
+  #reset-button,
+  #pvp-button,
+  #cvp-button {
+    margin: 9.5rem;
+    height: 6rem;
+  }
 }
-#message{
-    font-weight: 900;
-    margin:1.5vmin 0 1.5vmin 0vmin;
-    font-size: 6vmin;    
-    color: #2f0f3f;
-    font-style: italic;
-    
+
+@media only screen and (max-width: 749px) {
+  .dialogue-box {
+    flex-direction: column;
+    width: 0;
+  }
 }
-#new-game-button{
-    background-color: #3f3f3f;
-    color: white;
-    border: none;
-    margin:1.5vmin 0vmin 1.5vmin 8vmin;
-    padding: 0.5rem 1rem;
-    font-size: 4vmin;
-    border-radius: 0.8rem;
+
+.dialogue-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 125vmin;
+
+  padding: 0 0 5px 0;
+  background-color: #5667a4;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
 }
-.hide{
-    display: none;
+@media only screen and (max-width: 749px) {
+    .dialogue-box {
+    max-width: 100vmin;
+    }
 }
-.o{
-    color: #ddf6ff;
+
+
+#message {
+  font-weight: 900;
+  margin: 1.5vmin 0 1.5vmin 0vmin;
+  font-size: 6vmin;
+  color: #2f0f3f;
+  font-style: italic;
+}
+
+#new-game-button {
+  background-color: #3f3f3f;
+  color: white;
+  border: none;
+  margin: 1.5vmin 0vmin 1.5vmin 8vmin;
+  padding: 0.5rem 1rem;
+  font-size: 4vmin;
+  border-radius: 0.8rem;
+}
+@media only screen and (max-width: 749px) {
+    #new-game-button {
+        margin: 1.5vmin 0vmin ;
+
+    }
+}
+
+
+
+.hide {
+  display: none;
+}
+
+.o {
+  color: #ddf6ff;
 }
